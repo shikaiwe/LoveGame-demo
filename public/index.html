@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Game</title>
+    <link rel="stylesheet" href="/static/styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <div id="gameContainer">
+            <div id="score">爱心收集: <span id="heartCount">0</span> / 10</div>
+            <canvas id="garden"></canvas>
+            <div id="words" class="hidden">
+                <div id="messages">
+                    <div class="message-text">亲爱的，这是我们在一起的时光</div>
+                    <div id="elapsedTime"></div>
+                </div>
+                <div id="loveu">
+                    爱你直到永远<br/>
+                    <div class="signature">- 你的爱人</div>
+                </div>
+            </div>
+            <div id="gameStart" class="overlay">
+                <h2>💝 爱的寻觅 💝</h2>
+                <p>收集飘落的爱心来解锁我的心意</p>
+                <button id="startButton">开始游戏</button>
+            </div>
+            <div id="gameWin" class="overlay hidden">
+                <h2>💕 恭喜你找到了我的心 💕</h2>
+                <p>现在，让我告诉你一个秘密...</p>
+                <button id="showMessage">查看心意</button>
+            </div>
+        </div>
+    </div>
+    <audio id="bgMusic" loop>
+        <source src="/static/music/love.mp3" type="audio/mpeg">
+    </audio>
+    <div id="musicControl" class="play" onclick="toggleMusic()">🎵</div>
+    <script src="/static/js/garden.js" type="module"></script>
+    <script src="/static/js/main.js" type="module"></script>
+</body>
+</html> 
